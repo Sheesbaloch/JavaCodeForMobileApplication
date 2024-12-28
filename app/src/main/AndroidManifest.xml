@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PracticeApplication"
+        tools:targetApi="31">
+        <activity
+            android:name="googleMapsFolder.GoogleMapScreen"
+            android:exported="false" />
+        <activity
+            android:name="emailSendingCodeFolder.SendingEmailUsingJavaMailApi"
+            android:exported="false" />
+        <activity
+            android:name=".EmailSendingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".sendSmsUsingIntentBuiltinMessagingApp"
+            android:exported="false" />
+        <activity
+            android:name=".sendSmsScreen"
+            android:exported="false" />
+        <activity
+            android:name=".SharedPreferenceScreen"
+            android:exported="false" />
+        <activity
+            android:name=".GestureScreens"
+            android:exported="false" />
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ServiceScreen"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationScreens"
+            android:exported="false" />
+        <activity
+            android:name=".scrollViewScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ImageGalleryView"
+            android:exported="false" />
+        <activity
+            android:name=".gridviewScreen"
+            android:exported="false" />
+        <activity
+            android:name=".spinnerListScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ListBasedViews"
+            android:exported="false" />
+        <activity
+            android:name=".ListVIewScreen"
+            android:exported="false" />
+        <activity
+            android:name=".signupScreen"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAfUj0oCOtUYCeWrV0yeXsf6sbtSxTS1qU"/>
+
+    </application>
+
+</manifest>
